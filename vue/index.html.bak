@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="vue.js"></script>
+ </head>
+ <body>
+<div class="example">
+  <div id="my-component"></div>
+  <div class="test">
+	<my-component></my-component>
+  </div>
+</div>
+
+
+	<script type="text/javascript">
+		Vue.component('my-component',{
+			template:'<div>hello word</div>'
+		});
+		var Child = {
+		  template: '<div>TEST test</div>'
+		}
+		new Vue({
+			el:'.example',
+			components:{
+				'my-component':Child
+			}
+		})
+	</script>
+ </body>
+</html>
